@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// IsContainer reports whetver machine appears to be a container.
+// IsContainer reports whetver application is running in a container.
 func IsContainer() bool {
 	const root = ""
 	return openVZ(root) || lxc(root) || docker(root) || podman(root) || wsl(root)

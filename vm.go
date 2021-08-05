@@ -1,5 +1,5 @@
-// Package virt provides ability to check whetver running machine is a virtual
-// machine or a container.
+// Package virt is a library that helps detect if application is running in a
+// virtual machine, container or bare-metal.
 package virt
 
 import (
@@ -11,7 +11,7 @@ import (
 	"github.com/klauspost/cpuid/v2"
 )
 
-// IsVM reports whetver machine appears to be a virtual machine.
+// IsVM reports whetver application is running in a virtual machine.
 // Uses cpuid as primary source, filesystem as fallback.
 func IsVM() bool {
 	const root = ""
